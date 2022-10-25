@@ -1,0 +1,115 @@
+@use "./partials/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+body {
+  background: url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")
+    repeat;
+  background-size: cover;
+}
+
+.background__overlay {
+  width: inherit;
+  height: inherit;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+}
+
+.header {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 1.5rem 1rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__pl-title {
+    font-size: 1rem;
+    color: #3f1052;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__pl-subtitle {
+    font-size: 1rem;
+  }
+
+  &__pl-season-title {
+    text-transform: uppercase;
+    color: black;
+    font-size: 1rem;
+  }
+
+  &__pl-season {
+    color: #4c91f4;
+    font-size: 1rem;
+    text-align: right;
+  }
+}
+
+.league-table {
+  padding: 3rem 1rem 3rem;
+  &__main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    @include tablet {
+      justify-content: space-evenly;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem 5rem;
+    }
+  }
+
+  &__team-logo-container {
+    width: 100%;
+    text-align: center;
+
+    @include tablet {
+      width: 30%;
+    }
+  }
+
+  &__team-stat-link {
+    text-decoration: none;
+  }
+
+  &__team-logo {
+    width: 100%;
+    vertical-align: bottom;
+    margin-bottom: 3rem;
+  }
+
+  &__container-stat {
+    background-color: #f2f2f2;
+    background-image: url("https://assets.turbologo.com/blog/en/2020/01/19084653/Premier-League-symbol.png");
+    background-size: cover;
+    display: block;
+    margin-top: 3rem;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 20rem;
+  }
+
+  &__team-name {
+    font-size: 3rem;
+    text-align: center;
+    color: #f2f2f2;
+  }
+}
+
+p {
+  font-size: 1.5em;
+  color: #f2f2f2;
+}
